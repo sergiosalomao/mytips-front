@@ -1,6 +1,7 @@
 <template>
 
-  <v-data-table  :headers="headers" :items="items"  :items-per-page="10" class="elevation-1">
+  <v-data-table  :headers="headers" :items="items"  :items-per-page="10" class="caption">
+   
     <template v-slot:top>
             <v-toolbar flat>
               <div class="flex-grow-2"></div>
@@ -15,7 +16,7 @@
 
 
     <template v-slot:item.categoria.descricao="{ item }">
-           <v-chip  color="silver" >{{ item.categoria.descricao }}</v-chip>
+           <v-chip  color="red" small="" >{{ item.categoria.descricao }}</v-chip>
     </template>
 
 
