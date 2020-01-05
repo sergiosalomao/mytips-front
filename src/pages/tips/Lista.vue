@@ -42,6 +42,7 @@
 <br>
     <table-component :headers="headers" :items="tips">
       <template v-slot:acoes="{ item }">
+           <v-icon class="mr-2" @click="visualizar(item.id)">mdi-eye</v-icon>
         <v-icon class="mr-2" @click="atualizar(item.id)">mdi-table-edit</v-icon>
         <v-icon class="mr-2" @click="showModalDelete(item)">mdi-delete</v-icon>
       </template>
@@ -89,7 +90,7 @@ export default {
         {
           text: "Ações",
           value: "action",
-          width: "10%"
+          width: "15%"
         }
       ],
       tips: [],
@@ -105,6 +106,9 @@ export default {
     },
     atualizar(id) {
       this.$router.push({ path: `/tips/editar/${id}` });
+    },
+     visualizar(id) {
+      this.$router.push({ path: `/tips/visualizar/${id}` });
     },
     async deletar(item) {
       await this.TipService.remove(item.id);

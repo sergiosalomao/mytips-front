@@ -9,6 +9,7 @@
 
     <table-component :headers="headers" :items="categorias">
       <template v-slot:acoes="{ item }">
+        
         <v-icon class="mr-2" @click="atualizar(item.id)">mdi-table-edit</v-icon>
         <v-icon class="mr-2" @click="showModalDelete(item)">mdi-delete</v-icon>
       </template>
@@ -44,7 +45,8 @@ export default {
         {
           text: "Id",
           value: "id",
-           width: "03%"
+           width: "03%",
+           size:"30px"
         },
 
         {
@@ -71,6 +73,7 @@ export default {
     atualizar(id) {
       this.$router.push({ path: `/categorias/editar/${id}` });
     },
+    
     async deletar(item) {
       await this.CategoriaService.remove(item.id);
       this.$toasted.global.defaultSuccess();

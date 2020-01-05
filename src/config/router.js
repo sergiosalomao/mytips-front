@@ -4,6 +4,7 @@ import ListaTips from '@/pages/tips/Lista'
 import CadastroTip from '@/pages/tips/Cadastro'
 import ListaCategoria from '@/pages/categoria/Lista'
 import CadastroCategoria from '@/pages/categoria/Cadastro'
+import VisualizarTip from '@/pages/tips/Visualizar'
 
 
 Vue.use(VueRouter);
@@ -45,6 +46,12 @@ const routes = [
         name: 'Editar Categoria',
         path: '/categorias/editar/:id',
         component: CadastroCategoria,
+        
+    },
+    {
+        name: 'Visualizar Tip',
+        path: '/tips/visualizar/:id',
+        component: VisualizarTip,
         
     },
   

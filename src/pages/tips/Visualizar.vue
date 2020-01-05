@@ -1,42 +1,27 @@
 <template>
   <v-container fluid>
-    <h2>{{tip.id ? 'Atualizar' : 'Cadastrar'}}</h2>
+    <h2>Descrição</h2>
     <v-row>
       <v-col col="12" md="12">
         <v-card>
           <v-card-text>
             <v-form ref="form" v-model="valid" lazy-validation>
-              <v-row>
-                <v-col col="12" md="12">
-                  <v-select
-                    outlined
-                    v-model="tip.categoria_id"
-                    label="Categoria"
-                    :items="categorias"
-                  ></v-select>
-                </v-col>
-              </v-row>
-
-              <v-row>
-                <v-col col="12" md="12">
-                  <v-text-field outlined v-model="tip.titulo" label="Titulo"></v-text-field>
-                </v-col>
-              </v-row>
-
+            
               <v-row>
                 <v-col col="12" md="12">
                <v-textarea
         v-model="tip.descricao"
-        label="Message"
+        label="Descricao"
         counter
-        
+        height="450"
         full-width
         outlined
+       
       ></v-textarea>
                 </v-col>
               </v-row>
               <v-btn color="primary" class="mr-4" @click="$router.go(-1)">Voltar</v-btn>
-              <v-btn color="success" class="mr-4" @click="atualizar">Gravar</v-btn>
+           
             </v-form>
           </v-card-text>
         </v-card>
