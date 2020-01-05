@@ -13,8 +13,7 @@
 <br>
 <h4>ScreenShots</h4>
   <div>
-        <img src="https://github.com/sergiosalomao/mytips-front/blob/master/screenshots/screen1.png">
-        <br>
+  
         <img src="https://github.com/sergiosalomao/mytips-front/blob/master/screenshots/screen2.png">
         <br>
         <img src="https://github.com/sergiosalomao/mytips-front/blob/master/screenshots/screen3.png">
