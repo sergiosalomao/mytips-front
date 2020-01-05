@@ -15,6 +15,7 @@
         counter
         height="450"
         full-width
+        full-heigh
         outlined
        
       ></v-textarea>
