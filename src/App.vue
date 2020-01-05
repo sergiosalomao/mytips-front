@@ -30,7 +30,7 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>MyTips 1.20.1.1</v-toolbar-title>
+      <v-toolbar-title>MyTips 1.20.1.2</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
